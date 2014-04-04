@@ -1,6 +1,7 @@
 # proxy
 
-Proxy methods on host object until promise has resolved
+Proxy methods on host object until a promise has resolved.
+Make sure to load a polyfill for window.Promise if you want to support older broser
 
 ```js
 	var proxy = require('proxy-promise');
@@ -21,10 +22,6 @@ Proxy methods on host object until promise has resolved
   	.method1(args)
   	.then(function() {});
 ```
-
-## Note
-
-Make sure to load a polyfill for Promise if you want to support older broser
 
 ## API
 
