@@ -1,26 +1,29 @@
 # proxy
 
 Proxy methods on host object until a promise has resolved.
+
 Make sure to load a polyfill for window.Promise if you want to support older broser
 
 ```js
-	var proxy = require('proxy-promise');
 
-  var api = {
-    method1: function() { /* ... */ },
-    method2: function() { /* ... */ }
-  };
+var proxy = require('proxy-promise');
 
-  // load your api and return a promise
-  function load() { /* ... */ }
+var api = {
+method1: function() { /* ... */ },
+method2: function() { /* ... */ }
+};
 
-  // proxy method1 and method2
-  proxy(api, ['method1', 'method2'], load);
+// load your api and return a promise
+function load() { /* ... */ }
 
-  // call your
-  obj
-  	.method1(args)
-  	.then(function() {});
+// proxy method1 and method2
+proxy(api, ['method1', 'method2'], load);
+
+// call your
+obj
+  .method1(args)
+  .then(function() {});
+  
 ```
 
 ## API
