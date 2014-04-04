@@ -2,7 +2,7 @@
 
 Proxy methods on host object until a promise has resolved.
 
-Make sure to load a polyfill for window.Promise if you want to support older broser
+Make sure to load a polyfill for `window.Promise` if you want to support older broser
 
 ```js
 
