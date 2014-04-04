@@ -1,0 +1,27 @@
+{
+  "name": "proxy-call",
+  "version": "0.0.1",
+  "author": "PG Herveou",
+
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/pgherveou/lru-cache"
+  },
+
+  "keywords": ["lru-cache"],
+
+  "license": "MIT",
+
+  "homepage": "https://github.com/pgherveou/lru-cache",
+
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*",
+    "grunt": "*",
+    "grunt-shell": "*",
+    "grunt-contrib-jshint": "*",
+    "grunt-contrib-watch": "*",
+    "grunt-contrib-connect": "*",
+    "grunt-contrib-clean": "*"
+  }
+}
