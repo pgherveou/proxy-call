@@ -8,18 +8,17 @@ Proxy methods on host object until a promise has resolved.
 var proxy = require('proxy-promise');
 
 var api = {
-method1: function() { /* ... */ },
-method2: function() { /* ... */ }
+  method1: function() { /* ... */ },
+  method2: function() { /* ... */ }
 };
 
-// load your api and return a promise
-function load() { /* ... */ }
-
 // proxy method1 and method2
-proxy(api, ['method1', 'method2'], load);
+proxy(api, ['method1', 'method2'], function load(){
+  /* load stuff and return a promise */ 
+});
 
-// call your
-obj
+// call your api now 
+api
   .method1(args)
   .then(function() {});
   
