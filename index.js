@@ -10,15 +10,17 @@ var slice = [].slice;
  */
 
 module.exports = function (host, methods, getPromise) {
+  var promise;
+
   methods.forEach(function (name) {
 
     // backup method
-    var method = host[name],
-        promise;
+    var method = host[name];
 
     // proxy method
     host[name] = function () {
 
+      // set promise on first call
       if (!promise) promise = getPromise();
 
       // save args
