@@ -5,7 +5,7 @@ Proxy methods on host object until a promise has resolved.
 
 ```js
 
-var proxy = require('proxy-promise');
+var proxy = require('proxy-call');
 
 var api = {
   method1: function() { /* ... */ },
