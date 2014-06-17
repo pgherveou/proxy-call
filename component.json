@@ -1,12 +1,13 @@
 {
   "name": "proxy-call",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Proxy methods until a promise has resolved",
   "dependencies": {},
   "local": [],
   "scripts": ["index.js"],
   "main": "index.js",
   "development": {
-    "chaijs/chai": "*"
+    "chaijs/chai": "*",
+    "then/promise": "*"
   }
 }

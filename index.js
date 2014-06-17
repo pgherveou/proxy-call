@@ -12,6 +12,17 @@ var slice = [].slice;
 module.exports = function (host, methods, getPromise) {
   var promise;
 
+  if (!host || 'object' !== typeof host) {
+    throw new Error('Invalid host object');
+  }
+
+  if (!getPromise) {
+    getPromise = methods;
+    methods = Object.keys(host).filter(function (key) {
+      return 'function' === typeof host[key];
+    });
+  }
+
   methods.forEach(function (name) {
 
     // backup method
@@ -32,4 +43,6 @@ module.exports = function (host, methods, getPromise) {
       });
     };
   });
+
+  return host;
 };
